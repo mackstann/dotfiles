@@ -43,11 +43,6 @@ export HISTFILE=~/.zsh_history
 export HISTSIZE=5000
 export SAVEHIST=$HISTSIZE
 
-if [ x$TERM = xkterm -o x$TERM = xrxvt ]
-then
-    export TERM=xterm
-fi
-
 if [ -x `which vim` ]
 then
     export EDITOR=vim
