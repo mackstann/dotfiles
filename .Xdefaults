@@ -1,0 +1,58 @@
+!following characters: !#%+-./:@_~?=&
+*charClass: 33:48,35:48,37:48,43:48,45-47:48,58:48,64:48,95:48,126:48,35:48,63:48,61:48,38:48
+*cutchars: "\"&'()*,;<=>?@[\\]^`{|}~"
+
+!black
+*color0:   #000000
+*color8:   #606060
+!red
+*color1:   #a78271
+*color9:   #876251
+!green
+*color2:  #6b7c5d
+*color10:   #a2bc8d
+!yellow
+*color3:   #808050
+*color11:  #a0a070
+!blue
+*color4:   #617baa
+*color12:  #5b73a0
+!magenta
+*color5:   #a070a0
+*color13:  #a878a8
+!cyan
+*color6:   #52888e
+*color14:  #66aab2
+!white
+*color7:   #b0b0b0
+*color15:  #b0b0b0
+
+XTerm*SimpleMenu*background:  #c5c2c5
+XTerm*SimpleMenu*foreground:  #000000
+
+*font: -*-terminus-bold-*-*-*-14-*-*-*-*-*-iso10646-*
+*boldMode: false
+*colorBDMode: true
+*colorULMode: true
+*colorUL: rgb:d0/90/70
+*colorBD: rgb:70/80/a0
+*underLine: false
+*cursorColor: rgb:88/bb/66
+*saveLines: 10000
+
+*metaSendsEscape: true
+*eightBitInput: false
+*eightBitOutput: false
+
+XTerm.scrollBar: false
+Rxvt.scrollBar: false
+
+XTerm.geometry: 90x32
+Rxvt.geometry: 90x32
+
+XTerm.foreground: grey
+Rxvt.foreground: grey
+
+XTerm.background: black
+Rxvt.background: black
+
