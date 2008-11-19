@@ -27,9 +27,6 @@
 *color7:   #b0b0b0
 *color15:  #b0b0b0
 
-XTerm*SimpleMenu*background:  #c5c2c5
-XTerm*SimpleMenu*foreground:  #000000
-
 *font: -*-terminus-bold-*-*-*-14-*-*-*-*-*-iso10646-*
 *boldMode: false
 *colorBDMode: true
