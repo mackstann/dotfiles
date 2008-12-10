@@ -19,4 +19,5 @@ export CVS_RSH=ssh
 export EMAIL="Nick Welch <mack@incise.org>"
 export MAILDIR=$HOME/Maildir
 export MANPATH=$HOME/sw/share/man:
+export MPRIS_REMOTE_PLAYER=corn
 
