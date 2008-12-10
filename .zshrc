@@ -14,6 +14,9 @@ setopt rm_star_silent
 
 bindkey -v
 bindkey '^R' history-incremental-search-backward
+bindkey '^P' history-incremental-search-backward
+bindkey '^N' history-incremental-search-forward
+bindkey '^?' backward-delete-char
 
 autoload -Uz compinit
 compinit
