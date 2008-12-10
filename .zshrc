@@ -28,9 +28,9 @@ zstyle ':completion:*:warnings' format '%Bno matches for: %d%b'
 #zstyle ':completion::*:mplayer:*' file-patterns '*'
 zstyle ':completion::*:*:*' file-patterns '*'
 
+alias vi=vim
 alias p=python
 alias more=less
-alias vi=vim
 alias ls='ls -1F'
 alias vim='vim -X'
 alias ack=ack-grep
@@ -46,13 +46,7 @@ export HISTFILE=~/.zsh_history
 export HISTSIZE=5000
 export SAVEHIST=$HISTSIZE
 
-if [ -x `which vim` ]
-then
-    export EDITOR=vim
-else
-    export EDITOR=vi
-fi
-
+export EDITOR=vim
 export VISUAL=$EDITOR
 export PAGER=less
 export PYTHONSTARTUP="$HOME/.pythonstartup.py"
