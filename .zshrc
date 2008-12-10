@@ -19,15 +19,15 @@ bindkey '^P' history-incremental-search-backward
 bindkey '^N' history-incremental-search-forward
 bindkey '^?' backward-delete-char
 
-autoload -Uz compinit
-compinit
-
-zstyle :compinstall filename '/home/death/.zshrc'
-zstyle ':completion:*:descriptions' format '%U%B%d%b%u'
-zstyle ':completion:*:warnings' format '%Bno matches for: %d%b'
-#zstyle ':completion::*:(foo|bar):*' file-patterns '*'
-#zstyle ':completion::*:mplayer:*' file-patterns '*'
-zstyle ':completion::*:*:*' file-patterns '*'
+#autoload -Uz compinit
+#compinit
+#
+#zstyle :compinstall filename '/home/death/.zshrc'
+#zstyle ':completion:*:descriptions' format '%U%B%d%b%u'
+#zstyle ':completion:*:warnings' format '%Bno matches for: %d%b'
+##zstyle ':completion::*:(foo|bar):*' file-patterns '*'
+##zstyle ':completion::*:mplayer:*' file-patterns '*'
+#zstyle ':completion::*:*:*' file-patterns '*'
 
 alias vi=vim
 alias p=python
