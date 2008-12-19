@@ -1,7 +1,7 @@
 PATH=/sbin:/bin:/usr/sbin:/usr/bin:/home/death/dev/bin
 
 # volume, console keyboard repeat rate
-@reboot sudo aumix -v 80 -c 0 -i 0 -l 0 -p 0 -w 80 -1 0 -2 0 -3 0 >/dev/null 2>&1
+@reboot sudo aumix -v 100 -c 0 -i 0 -l 0 -p 0 -w 100 -1 0 -2 0 -3 0 >/dev/null 2>&1
 @reboot sudo kbdrate -d 210 -r 83
 
 # kernel tweaks
