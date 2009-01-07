@@ -32,7 +32,5 @@ endif
 let python_highlight_all = 1
 hi ModeMsg term=bold cterm=underline
 
-set backup
-set backupdir=$HOME/.vim/backup
 set directory=$HOME/.vim/tmp
 
