@@ -32,5 +32,5 @@ endif
 let python_highlight_all = 1
 hi ModeMsg term=bold cterm=underline
 
-set directory=$HOME/.vim/tmp
+set dir=$HOME/.vim/tmp
 
