@@ -6,3 +6,6 @@ bell_msg ""
 caption always '%-Lw%{= bk}%50>%n%f* %t%{-}%+Lw%<'
 hardstatus alwayslastline
 
+bind h focus up
+bind l focus down
+
