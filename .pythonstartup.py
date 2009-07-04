@@ -1,4 +1,4 @@
-import sys, os, time, re, popen2, random, pprint
+import sys, os, time, re, random, pprint
 sys.ps1 = "\033[34m>>>\033[0m "
 sys.ps2 = "\033[32m...\033[0m "
 
