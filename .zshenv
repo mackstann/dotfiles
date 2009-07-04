@@ -1,7 +1,7 @@
 # zshenv is always loaded
 
 umask 022
-ulimit -c unlimited
+ulimit -c 0
 
 export PATH=\
 $HOME/dev/bin:\
@@ -16,9 +16,8 @@ $HOME/sw/bin:\
 /usr/games
 
 export CVS_RSH=ssh
-export EMAIL="Nick Welch <mack@incise.org>"
+export EMAIL="Nick Welch <nick@incise.org>"
 export MAILDIR=$HOME/Maildir
 export MANPATH=$HOME/sw/share/man:
 export MPRIS_REMOTE_PLAYER=corn
-export PYTHONPATH="$HOME/dev/whimsy:$PYTHONPATH"
 
