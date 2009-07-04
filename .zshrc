@@ -34,7 +34,6 @@ alias p=python
 alias more=less
 alias ls='ls -1F'
 alias vim='vim -X'
-alias ack=ack-grep
 alias procs='ps awfuxxww | grep ^$USER'
 alias mpc='mpc --format "[%artist% - [%album% - ##%track% - ]%title%]|[%file%]"'
 alias Lower="rename 'y/A-Z/a-z/'"
@@ -51,4 +50,5 @@ export EDITOR=vim
 export VISUAL=$EDITOR
 export PAGER=less
 export PYTHONSTARTUP="$HOME/.pythonstartup.py"
+export TERM=xterm-256color
 
