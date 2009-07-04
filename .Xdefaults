@@ -27,7 +27,8 @@
 *color7:   #b0b0b0
 *color15:  #b0b0b0
 
-*font: -*-terminus-bold-*-*-*-14-*-*-*-*-*-iso10646-*
+!*font: -*-terminus-bold-*-*-*-14-*-*-*-*-*-iso10646-*
+urxvt*font: xft:Bitstream Vera Sans Mono:Bold:pixelsize=12
 *boldMode: false
 *colorBDMode: true
 *colorULMode: true
