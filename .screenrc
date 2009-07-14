@@ -4,6 +4,7 @@ termcapinfo xterm ti@:te@
 vbell off
 bell_msg ""
 caption always '%-Lw%{= bk}%50>%n%f* %t%{-}%+Lw%<'
+hardstatus string ''
 hardstatus alwayslastline
 
 bind h focus up
