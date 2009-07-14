@@ -13,7 +13,6 @@ set wildmenu
 set hidden
 set vb t_vb=
 set pastetoggle=<F11>
-set t_Co=256
 set modeline
 nnoremap <F2> :set nonumber!<CR>
 
