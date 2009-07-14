@@ -9,6 +9,7 @@ setopt no_bg_nice
 setopt no_menu_complete
 setopt no_auto_menu
 setopt no_no_match
+setopt no_auto_remove_slash
 setopt complete_in_word
 setopt hist_ignore_all_dups
 setopt rm_star_silent
