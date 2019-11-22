@@ -1,8 +1,45 @@
-set nocompatible 
-set sts=4
-set sw=4
+set nocompatible
+filetype off
+
+set rtp+=~/.vim/bundle/Vundle.vim
+call vundle#begin()
+" use :PluginInstall to install/update these
+Plugin 'gmarik/Vundle.vim'
+Bundle 'jlanzarotta/bufexplorer'
+Plugin 'scrooloose/syntastic'
+Plugin 'kien/ctrlp.vim'
+Plugin 'fatih/vim-go'
+Plugin 'dgryski/vim-godef'
+Plugin 'elzr/vim-json'
+Plugin 'chase/vim-ansible-yaml'
+Plugin 'airblade/vim-gitgutter'
+Plugin 'flazz/vim-colorschemes'
+Plugin 'xolox/vim-colorscheme-switcher'
+Plugin 'xolox/vim-misc'
+" All of your Plugins must be added before the following line
+call vundle#end()            " required
+filetype plugin indent on    " required
+
+let g:godef_split=3
+"let g:go_highlight_functions = 1 " slow
+let g:go_highlight_methods = 1
+"let g:go_highlight_structs = 1 " slow
+let g:go_highlight_operators = 1
+let g:go_highlight_build_constraints = 1
+"let g:syntastic_go_checkers = ['go', 'gometalinter']
+let g:syntastic_go_checkers = ['gometalinter']
+let g:syntastic_go_gometalinter_args = '--vendored-linters --disable-all --enable golint --enable ineffassign --enable deadcode --enable gofmt --enable misspell'
+"let g:go_metalinter_enabled = ['go', 'errcheck', 'unused', 'convert', 'golint', 'gosimple', 'vet', 'ineffassign', 'deadcode', 'vetshadow', 'staticcheck', 'gofmt', 'misspell']
+"let g:go_metalinter_autosave_enabled = ['golint', 'gosimple', 'vet', 'ineffassign', 'deadcode', 'vetshadow', 'staticcheck', 'gofmt', 'misspell']
+"let g:go_metalinter_autosave = 1
+let g:go_fmt_options = "-s"
+let g:syntastic_mode_map = { 'mode': 'active', 'passive_filetypes': ['cucumber'] } " too slow
+
+let g:syntastic_python_python_exec = '/usr/local/bin/python3.6'
+
+" basic settings
+
 set backspace=indent,eol,start
-set expandtab
 set showcmd
 set showmatch
 set ruler
@@ -12,36 +49,69 @@ set wildmode=longest:full
 set wildmenu
 set hidden
 set vb t_vb=
-set pastetoggle=<F11>
+set t_Co=256
+"set background=dark
+
 set modeline
-nnoremap <F2> :set nonumber!<CR>
-
-syntax on
-
-com Q q
-com W w
-com Wq wq
-com WQ wq
-
-map ,b :BufExplorer<CR>
-
-filetype plugin indent on
-
-autocmd FileType python set complete+=k~/.vim/pydiction-0.5/pydiction "isk+=.,(
-
-au BufRead,BufNewFile *.vala setfiletype cs
-
-let python_highlight_all = 1
-hi ModeMsg term=bold cterm=underline
-
+set ai
+set smartindent
+set encoding=utf-8
 set dir=$HOME/.vim/tmp
 
-map <buffer> <S-e> :w<CR>:!python "%"<CR>
+" code formatting/parsing/etc.
 
-set foldminlines=99999
+syntax on
+colorscheme 256-jungle
+set lazyredraw
+"colorscheme jellybeans
+"colorscheme badwolf
+"colorscheme base
+"colorscheme blackboard
+"colorscheme buddy
+"colorscheme cobalt2
 
-colorscheme dim
-highlight DiffAdd    term=reverse guibg=#222222 guifg=green
-highlight DiffChange term=reverse guibg=#222222 guifg=cyan
-highlight DiffText   term=reverse guibg=#222222 guifg=yellow
-highlight DiffDelete term=reverse guibg=#222222 guifg=red
+" fix background color
+highlight Normal ctermbg=NONE
+highlight nonText ctermbg=NONE
+
+filetype plugin indent on
+let python_highlight_all = 1
+hi SpellBad term=underline gui=undercurl guisp=#cc33aa " for pyflakes.vim errors
+hi ModeMsg term=bold cterm=underline " for pyflakes, i think
+set foldminlines=99999 " avoid folding
+let loaded_matchparen = 0 " matchparen can slow things down a lot sometimes
+
+set sw=8
+set ts=8
+set sts=8
+set noexpandtab
+set tw=120
+
+au BufNewFile,BufRead *.py set expandtab sw=4 sts=4
+au BufNewFile,BufRead *.rb set expandtab sw=2 sts=2
+au BufNewFile,BufRead *.feature set expandtab sw=2 sts=2
+au BufNewFile,BufRead *.json set expandtab sw=4 sts=4
+
+autocmd Filetype gitcommit setlocal textwidth=72
+
+" key bindings
+
+com! Q q
+com! W w
+com! Wq wq
+com! WQ wq
+com! Qa qa
+com! Wqa wqa
+com! WQa wqa
+map ,b :BufExplorer<CR>
+nnoremap <F2> :set nonumber!<CR>
+set pastetoggle=<F12>
+
+" show cursorline, but only in active window.
+" ugh, too slow
+"augroup CursorLine
+"	au!
+"	au VimEnter,WinEnter,BufWinEnter * setlocal cursorline
+"	au WinLeave * setlocal nocursorline
+"augroup END
+"hi CursorLine cterm=NONE ctermbg=234
