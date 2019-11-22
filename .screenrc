@@ -1,12 +1,9 @@
 escape ^Jj
-# lets you scroll in xterm
-termcapinfo xterm ti@:te@
 vbell off
 bell_msg ""
 caption always '%-Lw%{= bk}%50>%n%f* %t%{-}%+Lw%<'
-hardstatus string ''
 hardstatus alwayslastline
+defscrollback 20000
 
 bind h focus up
 bind l focus down
-
