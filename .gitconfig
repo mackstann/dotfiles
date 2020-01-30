@@ -6,9 +6,4 @@
     status = auto
     branch = auto
 [alias]
-    vimdiff = difftool -y --tool=vimdiffreadonly -U99999 --patience
     st = status
-[difftool]
-    prompt = false
-[difftool "vimdiffreadonly"]
-    cmd = "vim -R -d -c 'wincmd l' \"$LOCAL\" \"$REMOTE\""
