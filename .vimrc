@@ -81,16 +81,11 @@ hi ModeMsg term=bold cterm=underline " for pyflakes, i think
 set foldminlines=99999 " avoid folding
 let loaded_matchparen = 0 " matchparen can slow things down a lot sometimes
 
-set sw=8
+set sw=4
+set sts=4
 set ts=8
-set sts=8
-set noexpandtab
+set expandtab
 set tw=120
-
-au BufNewFile,BufRead *.py set expandtab sw=4 sts=4
-au BufNewFile,BufRead *.rb set expandtab sw=2 sts=2
-au BufNewFile,BufRead *.feature set expandtab sw=2 sts=2
-au BufNewFile,BufRead *.json set expandtab sw=4 sts=4
 
 autocmd Filetype gitcommit setlocal textwidth=72
 
