@@ -7,3 +7,4 @@ defscrollback 20000
 
 bind h focus up
 bind l focus down
+bind x # disable password lock (always triggered on accident)
