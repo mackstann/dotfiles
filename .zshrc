@@ -12,6 +12,9 @@ setopt complete_in_word
 setopt hist_ignore_all_dups
 setopt rm_star_silent
 
+autoload -U compinit && compinit
+zmodload -i zsh/complist
+
 bindkey -v
 bindkey '^R' history-incremental-search-backward
 bindkey '^P' history-incremental-search-backward
