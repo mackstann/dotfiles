@@ -12,7 +12,7 @@ setopt complete_in_word
 setopt hist_ignore_all_dups
 setopt rm_star_silent
 
-autoload -U compinit && compinit
+autoload -U compinit && compinit -i
 zmodload -i zsh/complist
 
 bindkey -v
