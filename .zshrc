@@ -36,8 +36,6 @@ export EDITOR=vim
 export VISUAL=$EDITOR
 export PAGER=less
 
-export GREP_OPTIONS="--exclude-dir=node_modules"
-
 #prompt off
 function precmd {
 	local branch=`git rev-parse --abbrev-ref HEAD 2>/dev/null`
