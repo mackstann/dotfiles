@@ -7,3 +7,9 @@
     branch = auto
 [alias]
     st = status
+[merge]
+    conflictstyle = diff3
+[push]
+    default = current
+[pull]
+    ff = only

@@ -4,6 +4,12 @@ bell_msg ""
 caption always '%-Lw%{= bk}%50>%n%f* %t%{-}%+Lw%<'
 hardstatus alwayslastline
 defscrollback 20000
+maptimeout 10 # short escape delay
+
+# by default, screen disables the terminal "alternate screen" that most full-screen apps use. but
+# why live without it?
+altscreen on
 
 bind h focus up
 bind l focus down
+bind x # disable password lock (always triggered on accident)

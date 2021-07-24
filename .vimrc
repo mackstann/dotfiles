@@ -92,6 +92,7 @@ set tw=120
 
 autocmd Filetype gitcommit setlocal textwidth=72
 autocmd Filetype go setlocal noexpandtab, sw=8, sts=8
+autocmd Filetype javascript setlocal sw=2 sts=2 expandtab
 
 " key bindings
 
