@@ -36,6 +36,9 @@ let g:go_fmt_options = "-s"
 let g:syntastic_mode_map = { 'mode': 'active', 'passive_filetypes': ['cucumber'] } " too slow
 
 let g:syntastic_python_python_exec = '/usr/local/bin/python3.6'
+let g:go_fmt_autosave = 1
+au BufWritePre,FileWritePre *.go :GoFmt
+
 
 " basic settings
 
@@ -88,6 +91,7 @@ set expandtab
 set tw=120
 
 autocmd Filetype gitcommit setlocal textwidth=72
+autocmd Filetype go setlocal noexpandtab sw=8 sts=8
 autocmd Filetype javascript setlocal sw=2 sts=2 expandtab
 
 " key bindings
