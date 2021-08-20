@@ -20,6 +20,8 @@ bindkey '^R' history-incremental-search-backward
 bindkey '^P' history-incremental-search-backward
 bindkey '^N' history-incremental-search-forward
 bindkey '^?' backward-delete-char
+# short escape delay
+KEYTIMEOUT=1
 
 alias vi=vim
 alias p=python
@@ -50,3 +52,12 @@ function precmd {
 }
 
 eval "$(direnv hook zsh)"
+
+# for meteor: https://github.com/meteor/meteor/issues/8057
+#ulimit -n 65536 65536
+# warning! setting this sets `ulimit -f` (file size limit) too. If uncommented, you'll want `ulimit
+# -f unlimited` to compensate.
+
+export NVM_DIR="$HOME/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
+[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
